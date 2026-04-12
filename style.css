@@ -1135,3 +1135,17 @@ h1, h2, h3 {
     content-visibility: auto;
     contain-intrinsic-size: 1px 1000px;
 }
+
+/* Market Proof Vertical List */
+.market-proof-list {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.market-proof-list .market-card-visual {
+    width: 100%;
+    margin-bottom: 0;
+}

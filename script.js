@@ -30,27 +30,6 @@ document.addEventListener('DOMContentLoaded', () => {
         },
     });
 
-    // Market Proof Carousel
-    const marketplaceSwiper = new Swiper('.marketplace-carousel', {
-        slidesPerView: 1,
-        spaceBetween: 24,
-        autoplay: {
-            delay: 5000,
-            disableOnInteraction: false,
-        },
-        pagination: {
-            el: '.swiper-pagination',
-            clickable: true,
-        },
-        breakpoints: {
-            768: {
-                slidesPerView: 2,
-            },
-            1024: {
-                slidesPerView: 3,
-            },
-        },
-    });
 
     // FAQ Accordion logic
     const faqItems = document.querySelectorAll('.faq-item');
