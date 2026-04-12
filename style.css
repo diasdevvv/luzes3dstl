@@ -1129,3 +1129,9 @@ h1, h2, h3 {
         grid-template-columns: 1fr;
     }
 }
+
+/* Performance Optimizations - Content Visibility */
+.visual-proof, .market-proof, .roi-section, .benefits, .pain-desire, .features, .bonus-exclusive, .pricing, .guarantee, .faq {
+    content-visibility: auto;
+    contain-intrinsic-size: 1px 1000px;
+}
