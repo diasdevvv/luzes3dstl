@@ -106,3 +106,25 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 });
+
+// Tracking: InitiateCheckout on Click
+document.addEventListener('DOMContentLoaded', () => {
+    const checkoutButtons = document.querySelectorAll('a[href*="lowify.com.br/checkout"]');
+    checkoutButtons.forEach(button => {
+        button.addEventListener('click', () => {
+            if (window.fbq) {
+                fbq('track', 'InitiateCheckout');
+            }
+        });
+    });
+
+    // Also track popup simulate buy
+    const modalPremiumBtn = document.querySelector('#upsell-modal .cta-button');
+    if (modalPremiumBtn) {
+        modalPremiumBtn.addEventListener('click', () => {
+            if (window.fbq) {
+                fbq('track', 'InitiateCheckout');
+            }
+        });
+    }
+});
