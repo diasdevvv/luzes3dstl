@@ -86,3 +86,23 @@ document.addEventListener('DOMContentLoaded', () => {
         observer.observe(section);
     });
 });
+
+// Upsell Modal Logic
+document.addEventListener('DOMContentLoaded', () => {
+    const basicTrigger = document.getElementById('basic-plan-trigger');
+    const modal = document.getElementById('upsell-modal');
+    
+    if (basicTrigger && modal) {
+        basicTrigger.addEventListener('click', (e) => {
+            e.preventDefault();
+            modal.classList.add('active');
+        });
+
+        // Close modal if clicking outside
+        modal.addEventListener('click', (e) => {
+            if (e.target === modal) {
+                modal.classList.remove('active');
+            }
+        });
+    }
+});
