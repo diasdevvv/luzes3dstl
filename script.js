@@ -128,3 +128,42 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 });
+
+// UTM Propagation Script
+(function() {
+    function getQueryParameters() {
+        const params = {};
+        const queryString = window.location.search.substring(1);
+        if (queryString) {
+            const pairs = queryString.split('&');
+            for (let i = 0; i < pairs.length; i++) {
+                const pair = pairs[i].split('=');
+                params[pair[0]] = decodeURIComponent(pair[1]);
+            }
+        }
+        return params;
+    }
+
+    function appendParamsToLinks() {
+        const urlParams = getQueryParameters();
+        if (Object.keys(urlParams).length === 0) return;
+
+        const links = document.querySelectorAll('a[href*="lowify.com.br"]');
+        links.forEach(link => {
+            try {
+                const url = new URL(link.href);
+                for (const key in urlParams) {
+                    url.searchParams.set(key, urlParams[key]);
+                }
+                link.href = url.toString();
+            } catch (e) {
+                console.error("Error appending UTMs to link:", link.href, e);
+            }
+        });
+    }
+
+    // Run on load and after short delay to catch dynamic elements
+    window.addEventListener('load', appendParamsToLinks);
+    setTimeout(appendParamsToLinks, 1000);
+    setTimeout(appendParamsToLinks, 3000);
+})();
