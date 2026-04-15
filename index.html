@@ -55,7 +55,17 @@
 <body>
     <!-- Top Urgency Bar -->
     <div class="urgency-bar">
-        <span>Oferta especial disponível apenas hoje</span>
+        <span>⏰ Preço voltará ao normal em <strong id="urgency-countdown">00:00:00</strong></span>
+    </div>
+
+    <!-- Purchase Notification Popup -->
+    <div id="purchase-popup" class="purchase-popup" aria-live="polite">
+        <div class="purchase-popup-icon">🛒</div>
+        <div class="purchase-popup-text">
+            <span id="popup-name" class="popup-name">Carlos M.</span>
+            <span class="popup-sub">acabou de comprar · <span id="popup-viewers">18</span> pessoas agora</span>
+        </div>
+        <span class="popup-dot"></span>
     </div>
 
     <!-- Hero Section -->

@@ -1,3 +1,72 @@
+// ── Urgency Bar: Countdown até meia-noite ──────────────────────────────────
+(function () {
+    function updateCountdown() {
+        const now = new Date();
+        const midnight = new Date();
+        midnight.setHours(23, 59, 59, 999);
+        const diff = midnight - now;
+        const h = Math.floor(diff / 3600000);
+        const m = Math.floor((diff % 3600000) / 60000);
+        const s = Math.floor((diff % 60000) / 1000);
+        const pad = n => String(n).padStart(2, '0');
+        const el = document.getElementById('urgency-countdown');
+        if (el) el.textContent = `${pad(h)}:${pad(m)}:${pad(s)}`;
+    }
+    updateCountdown();
+    setInterval(updateCountdown, 1000);
+})();
+
+// ── Purchase Notification Popup ────────────────────────────────────────────
+(function () {
+    const names = [
+        // 20 masculinos
+        'Carlos M.', 'Lucas S.', 'Rafael O.', 'Gabriel F.', 'Mateus A.',
+        'Felipe R.', 'Bruno C.', 'Diego N.', 'Thiago P.', 'André L.',
+        'Rodrigo B.', 'Eduardo V.', 'Gustavo T.', 'Leonardo H.', 'Vinicius M.',
+        'João P.', 'Henrique D.', 'Marcelo K.', 'Igor Z.', 'Samuel W.',
+        // 5 femininos
+        'Ana C.', 'Beatriz L.', 'Camila F.', 'Fernanda R.', 'Juliana S.'
+    ];
+    const cities = [
+        'São Paulo, SP', 'Rio de Janeiro, RJ', 'Belo Horizonte, MG',
+        'Curitiba, PR', 'Fortaleza, CE', 'Manaus, AM', 'Salvador, BA',
+        'Porto Alegre, RS', 'Recife, PE', 'Goiânia, GO',
+        'Brasília, DF', 'Campinas, SP', 'Florianópolis, SC', 'Natal, RN'
+    ];
+
+    function initPopup() {
+        const popup   = document.getElementById('purchase-popup');
+        const nameEl  = document.getElementById('popup-name');
+        const viewsEl = document.getElementById('popup-viewers');
+        if (!popup || !nameEl || !viewsEl) return;
+
+        let lastIdx = -1;
+        function showPopup() {
+            let idx;
+            do { idx = Math.floor(Math.random() * names.length); } while (idx === lastIdx);
+            lastIdx = idx;
+            const city    = cities[Math.floor(Math.random() * cities.length)];
+            const viewers = Math.floor(Math.random() * 18) + 8;
+            nameEl.textContent  = `${names[idx]} · ${city}`;
+            viewsEl.textContent = viewers;
+            popup.classList.add('show');
+            setTimeout(() => { popup.classList.remove('show'); }, 4500);
+        }
+
+        setTimeout(function loop() {
+            showPopup();
+            const next = (Math.floor(Math.random() * 12) + 18) * 1000;
+            setTimeout(loop, next + 5000);
+        }, 6000);
+    }
+
+    if (document.readyState === 'loading') {
+        document.addEventListener('DOMContentLoaded', initPopup);
+    } else {
+        initPopup();
+    }
+})();
+
 document.addEventListener('DOMContentLoaded', () => {
     // Initialize Lucide Icons
     lucide.createIcons();
