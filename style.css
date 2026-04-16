@@ -167,7 +167,57 @@ h1, h2, h3 {
     z-index: 1000;
 }
 
-/* Hero Section */
+/* Brands Marquee */
+.brands-section {
+    padding: 32px 0 40px;
+    background: transparent;
+    overflow: hidden;
+}
+
+.brands-label {
+    text-align: center;
+    font-size: 0.75rem;
+    font-weight: 600;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: var(--text-secondary);
+    margin-bottom: 24px;
+    opacity: 0.5;
+}
+
+.brands-track-wrapper {
+    overflow: hidden;
+    width: 100%;
+    -webkit-mask-image: linear-gradient(to right, transparent 0%, black 12%, black 88%, transparent 100%);
+    mask-image: linear-gradient(to right, transparent 0%, black 12%, black 88%, transparent 100%);
+}
+
+.brands-track {
+    display: flex;
+    align-items: center;
+    gap: 64px;
+    width: max-content;
+    animation: brands-scroll 22s linear infinite;
+}
+
+.brand-logo {
+    height: 36px;
+    width: auto;
+    flex-shrink: 0;
+    filter: brightness(0) invert(1);
+    opacity: 0.35;
+    transition: opacity 0.3s ease;
+}
+
+.brand-logo:hover {
+    opacity: 0.7;
+}
+
+@keyframes brands-scroll {
+    from { transform: translateX(0); }
+    to   { transform: translateX(-50%); }
+}
+
 .hero {
     padding: 100px 0;
     background-color: var(--bg-dark);
