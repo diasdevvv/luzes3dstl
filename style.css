@@ -1484,7 +1484,69 @@ h3 {
     }
 }
 
-/* Purchase Notification Popup */
+/* Platform Badges (Hero) */
+.platform-badge {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    background: rgba(15, 15, 17, 0.88);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 14px;
+    padding: 10px 16px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4);
+    animation: float-badge 3s ease-in-out infinite;
+}
+
+.platform-badge img {
+    width: 36px;
+    height: 36px;
+    object-fit: contain;
+    border-radius: 8px;
+    flex-shrink: 0;
+}
+
+.platform-badge span {
+    font-size: 0.72rem;
+    color: rgba(255, 255, 255, 0.7);
+    line-height: 1.4;
+}
+
+.platform-badge span strong {
+    color: #fff;
+    font-size: 0.82rem;
+    display: block;
+}
+
+.platform-badge--ml {
+    bottom: 18%;
+    left: -10px;
+    animation-delay: 0s;
+}
+
+.platform-badge--shopee {
+    bottom: 5%;
+    right: -10px;
+    animation-delay: 1.5s;
+}
+
+@keyframes float-badge {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-6px); }
+}
+
+@media (max-width: 768px) {
+    .platform-badge {
+        padding: 8px 12px;
+        gap: 8px;
+    }
+    .platform-badge img { width: 28px; height: 28px; }
+    .platform-badge--ml { left: 4px; bottom: 22%; }
+    .platform-badge--shopee { right: 4px; bottom: 6%; }
+}
+
 .purchase-popup {
     position: fixed;
     top: 52px;
