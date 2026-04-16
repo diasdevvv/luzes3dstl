@@ -723,6 +723,21 @@ h3 {
     color: white;
 }
 
+/* Bonus icon items (image as icon) */
+.bonus-icon-item {
+    display: flex !important;
+    align-items: center;
+    gap: 10px;
+}
+
+.bonus-icon {
+    width: 36px;
+    height: 36px;
+    object-fit: contain;
+    border-radius: 6px;
+    flex-shrink: 0;
+}
+
 .negative-feature {
     color: #ff4d4d !important;
     font-weight: 500;
