@@ -154,7 +154,7 @@ h1, h2, h3 {
 
 /* Urgency Bar */
 .urgency-bar {
-    background: linear-gradient(90deg, #ff4d4d, #cc0000);
+    background: linear-gradient(90deg, #00a846, #007a32);
     color: white;
     text-align: center;
     padding: 12px 0;
@@ -1365,7 +1365,7 @@ h1, h2, h3 {
 
 .purchase-popup-icon {
     font-size: 1rem;
-    background: rgba(255, 122, 26, 0.12);
+    background: rgba(0, 168, 70, 0.15);
     border-radius: 7px;
     width: 30px;
     height: 30px;
