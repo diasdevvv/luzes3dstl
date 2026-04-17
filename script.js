@@ -1,48 +1,17 @@
-// ── Urgency Bar: Countdown por janelas de horário ──────────────────────────
+// ── Urgency Bar: Countdown até meia-noite ──────────────────────────────────
 (function () {
-    function getTargetTime() {
-        const now = new Date();
-        const h = now.getHours();
-        const target = new Date(now);
-
-        if (h >= 20) {
-            // 20:00 – 23:59 → conta até 00:00 do dia seguinte
-            target.setDate(target.getDate() + 1);
-            target.setHours(0, 0, 0, 0);
-        } else if (h >= 18) {
-            // 18:00 – 19:59 → conta até 20:00
-            target.setHours(20, 0, 0, 0);
-        } else if (h >= 15) {
-            // 15:00 – 17:59 → conta até 18:00
-            target.setHours(18, 0, 0, 0);
-        } else if (h >= 12) {
-            // 12:00 – 14:59 → conta até 15:00
-            target.setHours(15, 0, 0, 0);
-        } else if (h >= 3) {
-            // 03:00 – 11:59 → conta até 12:00
-            target.setHours(12, 0, 0, 0);
-        } else {
-            // 00:00 – 02:59 → conta até 03:00
-            target.setHours(3, 0, 0, 0);
-        }
-
-        return target;
-    }
-
     function updateCountdown() {
         const now = new Date();
-        const diff = getTargetTime() - now;
-        if (diff <= 0) return; // aguarda próximo tick para recalcular
-
+        const midnight = new Date();
+        midnight.setHours(23, 59, 59, 999);
+        const diff = midnight - now;
         const h = Math.floor(diff / 3600000);
         const m = Math.floor((diff % 3600000) / 60000);
         const s = Math.floor((diff % 60000) / 1000);
         const pad = n => String(n).padStart(2, '0');
-
         const el = document.getElementById('urgency-countdown');
         if (el) el.textContent = `${pad(h)}:${pad(m)}:${pad(s)}`;
     }
-
     updateCountdown();
     setInterval(updateCountdown, 1000);
 })();
@@ -66,8 +35,8 @@
     ];
 
     function initPopup() {
-        const popup   = document.getElementById('purchase-popup');
-        const nameEl  = document.getElementById('popup-name');
+        const popup = document.getElementById('purchase-popup');
+        const nameEl = document.getElementById('popup-name');
         const viewsEl = document.getElementById('popup-viewers');
         if (!popup || !nameEl || !viewsEl) return;
 
@@ -76,9 +45,9 @@
             let idx;
             do { idx = Math.floor(Math.random() * names.length); } while (idx === lastIdx);
             lastIdx = idx;
-            const city    = cities[Math.floor(Math.random() * cities.length)];
+            const city = cities[Math.floor(Math.random() * cities.length)];
             const viewers = Math.floor(Math.random() * 18) + 8;
-            nameEl.textContent  = `${names[idx]} · ${city}`;
+            nameEl.textContent = `${names[idx]} · ${city}`;
             viewsEl.textContent = viewers;
             popup.classList.add('show');
             setTimeout(() => { popup.classList.remove('show'); }, 4500);
@@ -137,7 +106,7 @@ document.addEventListener('DOMContentLoaded', () => {
         const question = item.querySelector('.faq-question');
         question.addEventListener('click', () => {
             const isActive = item.classList.contains('active');
-            
+
             // Close all other items
             faqItems.forEach(otherItem => {
                 otherItem.classList.remove('active');
@@ -156,7 +125,7 @@ document.addEventListener('DOMContentLoaded', () => {
             e.preventDefault();
             const targetId = this.getAttribute('href');
             if (targetId === '#') return;
-            
+
             const targetElement = document.querySelector(targetId);
             if (targetElement) {
                 window.scrollTo({
@@ -191,7 +160,7 @@ document.addEventListener('DOMContentLoaded', () => {
 document.addEventListener('DOMContentLoaded', () => {
     const basicTrigger = document.getElementById('basic-plan-trigger');
     const modal = document.getElementById('upsell-modal');
-    
+
     if (basicTrigger && modal) {
         basicTrigger.addEventListener('click', (e) => {
             e.preventDefault();
@@ -230,7 +199,7 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 // UTM Propagation Script
-(function() {
+(function () {
     function getQueryParameters() {
         const params = {};
         const queryString = window.location.search.substring(1);
