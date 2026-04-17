@@ -11,8 +11,14 @@
     <!-- Resource Hints -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://cdn.jsdelivr.net">
+    <link rel="preconnect" href="https://unpkg.com">
+    <link rel="preconnect" href="https://connect.facebook.net">
+
     <link rel="preload" as="style"
         href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Outfit:wght@600;700;800&display=swap">
+    <link rel="preload" as="image" href="hero_wide.png">
+
     <link
         href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Outfit:wght@600;700;800&display=swap"
         rel="stylesheet">
@@ -25,17 +31,7 @@
 
     <!-- Meta Pixel Code -->
     <script>
-        !function (f, b, e, v, n, t, s) {
-            if (f.fbq) return; n = f.fbq = function () {
-                n.callMethod ?
-                    n.callMethod.apply(n, arguments) : n.queue.push(arguments)
-            };
-            if (!f._fbq) f._fbq = n; n.push = n; n.loaded = !0; n.version = '2.0';
-            n.queue = []; t = b.createElement(e); t.async = !0;
-            t.src = v; s = b.getElementsByTagName(e)[0];
-            s.parentNode.insertBefore(t, s)
-        }(window, document, 'script',
-            'https://connect.facebook.net/en_US/fbevents.js');
+        !function (f, b, e, v, n, t, s) { if (f.fbq) return; n = f.fbq = function () { n.callMethod ? n.callMethod.apply(n, arguments) : n.queue.push(arguments) }; if (!f._fbq) f._fbq = n; n.push = n; n.loaded = !0; n.version = '2.0'; n.queue = []; t = b.createElement(e); t.async = !0; t.src = v; s = b.getElementsByTagName(e)[0]; s.parentNode.insertBefore(t, s) }(window, document, 'script', 'https://connect.facebook.net/en_US/fbevents.js');
         fbq('init', '938554989150164');
         fbq('track', 'PageView');
     </script>
@@ -77,7 +73,7 @@
                             Lucro</span>
                     </h1>
                     <p class="subheadline">O Pack mais queridinho da Shopee e do Mercado Livre voltou e agora com o
-                        melhor preço do mercado, aumente seus lucros em 2026 com apenas uma Impressora!</p>
+                        melhor preço do mercado, aumente seus lucros em 2026 com a sua Impressora 3D!</p>
                 </div>
 
                 <div class="hero-visual" style="margin: -10px 0 0 0;">
@@ -99,9 +95,9 @@
 
                 <div class="hero-text">
                     <ul class="hero-benefits">
+                        <li><i data-lucide="check-circle-2"></i> +150 Arquivos Luminárias 3D STL</li>
                         <li><i data-lucide="check-circle-2"></i> Compativel com qualquer Impressora 3D</li>
                         <li><i data-lucide="check-circle-2"></i> PLA, PETG, ABS e resina</li>
-                        <li><i data-lucide="check-circle-2"></i> Todos arquivos testados/aprovados</li>
                         <li><i data-lucide="check-circle-2"></i> Venda garantida</li>
                         <li><i data-lucide="check-circle-2"></i> 🚢 Entrega imediata após o pagamento</li>
                     </ul>
@@ -127,7 +123,7 @@
                             <img src="https://i.pravatar.cc/150?u=4" alt="Cliente" class="avatar">
                             <img src="https://i.pravatar.cc/150?u=5" alt="Cliente" class="avatar">
                         </div>
-                        <div class="customer-count">MAIS DE 4.500 CLIENTES FATURANDO!</div>
+                        <div class="customer-count">MAIS DE 1.000 CLIENTES FATURANDO!</div>
                     </div>
                 </div>
             </div>
@@ -159,6 +155,21 @@
         </div>
     </section>
 
+    <!-- Video Showcase Section -->
+    <section class="video-showcase">
+        <div class="container">
+            <div class="video-showcase-header">
+                <span class="video-badge">▶ +150 ARQUIVOS STLS APROVADOS</span>
+                <h2 class="section-title">APRENDA A IMPRIMIR E VENDER</h2>
+                <p class="section-subtitle">Modelos reais, resultados reais. Prontos para imprimir e vender.</p>
+            </div>
+            <div class="video-wrapper">
+                <video src="FOR SITE.mp4" autoplay muted loop playsinline preload="metadata" class="showcase-video">
+                </video>
+            </div>
+        </div>
+    </section>
+
     <!-- Visual Proof Section -->
     <section class="visual-proof">
         <div class="container">
@@ -169,95 +180,54 @@
                 <div class="swiper-wrapper">
                     <div class="swiper-slide">
                         <div class="model-card">
-                            <img src="lamp_model_1.png" alt="Luminária Orgânica" loading="lazy">
-                            <div class="model-info">
-                                <h3>Luminária Orgânica Leaf</h3>
-                                <p>Design fluido com difusão suave.</p>
-                            </div>
+                            <img src="1.jpeg" alt="Luminária 1" loading="lazy">
                         </div>
                     </div>
                     <div class="swiper-slide">
                         <div class="model-card">
-                            <img src="lamp_model_2.png" alt="Luminária Voronoi" loading="lazy">
-                            <div class="model-info">
-                                <h3>Torre Voronoi Modern</h3>
-                                <p>Estilo industrial e futurista.</p>
-                            </div>
+                            <img src="2.jpeg" alt="Luminária 2" loading="lazy">
                         </div>
                     </div>
                     <div class="swiper-slide">
                         <div class="model-card">
-                            <img src="lamp_model_3.png" alt="Esfera Flor da Vida" loading="lazy">
-                            <div class="model-info">
-                                <h3>Esfera Flor da Vida</h3>
-                                <p>Geometria sagrada e sombras incríveis.</p>
-                            </div>
+                            <img src="3.jpeg" alt="Luminária 3" loading="lazy">
                         </div>
                     </div>
                     <div class="swiper-slide">
                         <div class="model-card">
-                            <img src="lamp_model_4.png" alt="Luminária Pattern Oval" loading="lazy">
-                            <div class="model-info">
-                                <h3>Luminária Retro Pattern</h3>
-                                <p>Design geométrico com relevo sofisticado.</p>
-                            </div>
+                            <img src="4.jpeg" alt="Luminária 4" loading="lazy">
                         </div>
                     </div>
                     <div class="swiper-slide">
                         <div class="model-card">
-                            <img src="lamp_model_5.png" alt="Luminária Wood Curve" loading="lazy">
-                            <div class="model-info">
-                                <h3>Nordic Wood Curve</h3>
-                                <p>Estilo minimalista e aconchegante.</p>
-                            </div>
+                            <img src="5.jpeg" alt="Luminária 5" loading="lazy">
                         </div>
                     </div>
                     <div class="swiper-slide">
                         <div class="model-card">
-                            <img src="lamp_model_6.png" alt="Luminária Spiral Twist" loading="lazy">
-                            <div class="model-info">
-                                <h3>Spiral Twist Tower</h3>
-                                <p>Elegância fluida em formato de torre.</p>
-                            </div>
+                            <img src="6.jpeg" alt="Luminária 6" loading="lazy">
                         </div>
                     </div>
                     <div class="swiper-slide">
                         <div class="model-card">
-                            <img src="lamp_model_7.png" alt="Luminária Fluted Hourglass" loading="lazy">
-                            <div class="model-info">
-                                <h3>Fluted Hourglass</h3>
-                                <p>Geometria rítmica e iluminação difusa.</p>
-                            </div>
+                            <img src="7.png" alt="Luminária 7" loading="lazy">
                         </div>
                     </div>
                     <div class="swiper-slide">
                         <div class="model-card">
-                            <img src="lamp_model_8.png" alt="Luminária Mushroom" loading="lazy">
-                            <div class="model-info">
-                                <h3>Mushroom Classic</h3>
-                                <p>Design icônico e funcional para mesas.</p>
-                            </div>
+                            <img src="8.png" alt="Luminária 8" loading="lazy">
                         </div>
                     </div>
                     <div class="swiper-slide">
                         <div class="model-card">
-                            <img src="lamp_model_9.png" alt="Luminária Spiral Vortex" loading="lazy">
-                            <div class="model-info">
-                                <h3>Vortex Pattern</h3>
-                                <p>Linhas diagonais que criam harmonia visual.</p>
-                            </div>
+                            <img src="9.png" alt="Luminária 9" loading="lazy">
                         </div>
                     </div>
                     <div class="swiper-slide">
                         <div class="model-card">
-                            <img src="lamp_model_10.png" alt="Luminária Mesh Cat" loading="lazy">
-                            <div class="model-info">
-                                <h3>Mesh Cat Decor</h3>
-                                <p>Escultura em malha impressa com brilho interno.</p>
-                            </div>
+                            <img src="10.png" alt="Luminária 10" loading="lazy">
                         </div>
                     </div>
-                    <!-- Add more slides if needed -->
                 </div>
                 <div class="swiper-pagination"></div>
                 <div class="swiper-button-next"></div>
@@ -270,7 +240,14 @@
     <section class="market-proof">
         <div class="container">
             <h2 class="section-title">Luminárias com maiores vendas no Mercado Livre e na Shopee</h2>
-            <p class="section-subtitle">A prova real de que este é um mercado lucrativo e com alta demanda.</p>
+            <div class="market-proof-logos">
+                <img src="logo_ml.png" alt="Mercado Livre" class="market-proof-logo">
+                <img src="logo_shopee.png" alt="Shopee" class="market-proof-logo">
+            </div>
+            <p class="section-subtitle">
+                <span class="featured-badge-inline">AS MAIS LUCRATIVAS</span><br>
+                Você terá acesso as Luminárias mais vendidas do Mercado Livre e da Shopee.
+            </p>
 
             <div class="market-proof-list">
                 <div class="market-card-visual">
@@ -299,26 +276,6 @@
                 <p><i data-lucide="trending-up" class="market-icon-green"></i> Esses são modelos reais vendidos
                     diariamente por valores que variam de <strong>R$ 60,00 a R$ 130,00</strong>. Com o nosso pack, você
                     terá os arquivos para imprimir e lucrar igual a eles.</p>
-            </div>
-        </div>
-    </section>
-
-    <!-- Compatibility Section -->
-    <section class="compat-section">
-        <div class="container">
-            <div class="compat-card">
-                <div class="compat-badge">COMPATIBILIDADE</div>
-                <h2 class="compat-title">Funciona com qualquer impressora<br>que você já tem</h2>
-                <ul class="compat-list">
-                    <li><span class="compat-check">✔</span> Impressoras <strong>FDM</strong> (a mais comum)</li>
-                    <li><span class="compat-check">✔</span> Impressoras de resina</li>
-                    <li><span class="compat-check">✔</span> PLA, PETG, ABS e resina — todos compatíveis</li>
-                    <li><span class="compat-check">✔</span> Parede otimizada para difundir luz e gastar menos filamento
-                    </li>
-                    <li><span class="compat-check">✔</span> Cura, PrusaSlicer e Bambu Studio — funciona em todos</li>
-                    <li><span class="compat-check">✔</span> Zero tempo criando arquivo — baixou, fatiou, imprimiu</li>
-                    <li><span class="compat-check">✔</span> Acesso imediato após o pagamento</li>
-                </ul>
             </div>
         </div>
     </section>
@@ -395,53 +352,17 @@
                     <li><i data-lucide="check-circle-2"></i> Comece hoje a imprimir modelos validados, comerciais e
                         profissionais.</li>
                 </ul>
-                <a href="#planos" class="cta-button">MUDAR MEU NEGÓCIO AGORA</a>
             </div>
         </div>
     </section>
 
-    <!-- Features Overview -->
-    <section class="features">
-        <div class="container">
-            <h2 class="section-title">O que você recebe ao garantir o acesso</h2>
-            <div class="features-list">
-                <div class="feature-item">
-                    <span class="feature-count">150+</span>
-                    <div class="feature-text">
-                        <h3>Arquivos STL de Luminárias</h3>
-                        <p>Uma biblioteca completa com os designs mais desejados do momento.</p>
-                    </div>
-                </div>
-                <div class="feature-item">
-                    <i data-lucide="layers"></i>
-                    <div class="feature-text">
-                        <h3>Variação de Formatos</h3>
-                        <p>Modelos geométricos, orgânicos, temáticos e modulares.</p>
-                    </div>
-                </div>
-                <div class="feature-item">
-                    <i data-lucide="gauge"></i>
-                    <div class="feature-text">
-                        <h3>Espessura Otimizada</h3>
-                        <p>Testados para garantir a melhor passagem de luz com resistência.</p>
-                    </div>
-                </div>
-                <div class="feature-item">
-                    <i data-lucide="shield-check"></i>
-                    <div class="feature-text">
-                        <h3>Uso Comercial Liberado</h3>
-                        <p>Imprima e venda as peças físicas com total liberdade.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+
 
     <!-- New Bonus Section -->
     <section class="bonus-exclusive">
         <div class="container">
             <div class="bonus-header">
-                <h2 class="bonus-main-title">E NÃO PARA POR AÍ.... TEM MAIS!</h2>
+                <h2 class="bonus-main-title">TEM MAIS 🏮!</h2>
                 <p class="bonus-subtitle">Você também vai receber...</p>
                 <div class="bonus-badge-pill">4 BÔNUS EXCLUSIVOS</div>
             </div>
@@ -458,6 +379,10 @@
                         <p>Guia prático com configurações recomendadas para impressão FDM de luminárias, ajudando você a
                             reduzir falhas, melhorar acabamento e evitar desperdício de filamento logo nas primeiras
                             impressões.</p>
+                        <div class="bonus-price-tag">
+                            <span class="bonus-old-price">DE R$ 27,00</span>
+                            <span class="bonus-new-price">POR R$ 0,00 (GRÁTIS)</span>
+                        </div>
                     </div>
                 </div>
 
@@ -472,6 +397,10 @@
                         <p>Passo a passo simples mostrando como vender suas luminárias online (mercadolivre, shopee, olx
                             e etc...) mesmo que você esteja começando agora. Ideal para transformar sua impressora 3D em
                             uma fonte real de renda extra.</p>
+                        <div class="bonus-price-tag">
+                            <span class="bonus-old-price">DE R$ 27,00</span>
+                            <span class="bonus-new-price">POR R$ 0,00 (GRÁTIS)</span>
+                        </div>
                     </div>
                 </div>
 
@@ -485,6 +414,10 @@
                         <h3>PACK STL EXCLUSIVO PREMIUM (FORA DO PACOTE BASE)</h3>
                         <p>Modelo especial e diferenciado que não está incluído no pacote principal. Perfeito para quem
                             quer se destacar ao vender e oferecer algo que poucos terão.</p>
+                        <div class="bonus-price-tag">
+                            <span class="bonus-old-price">DE R$ 47,00</span>
+                            <span class="bonus-new-price">POR R$ 0,00 (GRÁTIS)</span>
+                        </div>
                     </div>
                 </div>
 
@@ -498,6 +431,10 @@
                         <h3>GUIA DE MATERIAIS: QUAL FILAMENTO USAR EM LUMINÁRIAS 3D</h3>
                         <p>Explicação clara sobre quais filamentos usar para diferentes tipos de luminária, evitando
                             erro comum de material inadequado e garantindo maior durabilidade e qualidade.</p>
+                        <div class="bonus-price-tag">
+                            <span class="bonus-old-price">DE R$ 17,00</span>
+                            <span class="bonus-new-price">POR R$ 0,00 (GRÁTIS)</span>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -520,6 +457,7 @@
                     </div>
                     <ul class="card-features">
                         <li><i data-lucide="check"></i> +150 Arquivos STL de Luminárias 3D</li>
+                        <li><img src="icon_whatsapp.png" alt="WhatsApp" class="inline-icon"> Suporte via Whatsapp</li>
                         <li><i data-lucide="clock-3"></i> Acesso Limitado (3 meses)</li>
                         <li class="negative-feature">❌ Não inclui bônus</li>
                     </ul>
@@ -529,39 +467,30 @@
                 </div>
 
                 <!-- Complete Plan -->
-                <div class="pricing-card complete">
-                    <div class="most-popular">MAIS ESCOLHIDO</div>
+                <div class="pricing-card complete z-index-1">
+                    <div class="most-popular z-index-2">MAIS ESCOLHIDO</div>
                     <div class="plan-banner">
                         <img src="plan_complete.jpg" alt="Plano Completo" loading="lazy">
                     </div>
                     <div class="card-header">
                         <h3>PLANO COMPLETO</h3>
                         <div class="old-price">R$ 97,00</div>
-                        <div class="price">R$ 27,90</div>
+                        <div class="price">R$ 27,00</div>
                     </div>
                     <ul class="card-features premium-list">
                         <li><i data-lucide="check"></i> + 250 Luminárias STL Prontos para Imprimir</li>
-                        <li class="bonus-icon-item"><img src="bonus_5.png" alt="Decoração" class="bonus-icon">
-                            <strong>+100</strong> Arquivos Famosos de Decoração STL
-                        </li>
-                        <li class="bonus-icon-item"><img src="bonus_6.png" alt="Vasos" class="bonus-icon">
-                            <strong>+120</strong> Arquivos de Vasos STL Aprovados
-                        </li>
-                        <li class="bonus-icon-item"><img src="bonus_7.png" alt="Carros 3D" class="bonus-icon">
-                            <strong>+100</strong> Arquivos de Carros 3D (Esportivos e Antigos)
-                        </li>
+                        <li><i data-lucide="check"></i> <strong>Acesso Vitalício</strong></li>
                         <li><i data-lucide="check"></i> Guia Passo a Passo</li>
                         <li><i data-lucide="check"></i> Passo a Passo em Vídeo</li>
+                        <li><img src="icon_whatsapp.png" alt="WhatsApp" class="inline-icon"> Suporte via Whatsapp</li>
                         <li>🎁 <strong>BÔNUS #1</strong> — Checklist de Impressão Ideal</li>
                         <li>🎁 <strong>BÔNUS #2</strong> — Guia Rápido: Como Vender Online</li>
                         <li>🎁 <strong>BÔNUS #3</strong> — PACK STL Exclusivo Premium</li>
                         <li>🎁 <strong>BÔNUS #4</strong> — Guia de Materiais: Qual Filamento Usar</li>
-                        <li>🗳️ Entrega imediata após o pagamento</li>
                         <li>🔓 Uso comercial liberado e sem limite</li>
-                        <li><i data-lucide="check"></i> <strong>Acesso Vitalício</strong></li>
                     </ul>
-                    <a href="https://pay.lowify.com.br/checkout?product_id=7JxzVa" target="_blank"
-                        rel="noopener noreferrer" class="cta-button pulse">Quero o Plano Completo</a>
+                    <a href="https://pay.lowify.com.br/checkout?product_id=QMYLOq" target="_blank"
+                        rel="noopener noreferrer" class="cta-button">Quero o Plano Completo</a>
                     <p class="tagline">O melhor custo-benefício para o seu negócio.</p>
                 </div>
             </div>
@@ -686,7 +615,7 @@
 
                 <div class="offer-box">
                     <span class="offer-label">OFERTA ESPECIAL</span>
-                    <div class="offer-price">DE <span class="strike">R$ 97,90</span> POR <span>R$ 17,90</span></div>
+                    <div class="offer-price">DE <span class="strike">R$ 97,90</span> POR <span>R$ 17,00</span></div>
                 </div>
 
                 <ul class="modal-benefits">
@@ -696,9 +625,9 @@
                 </ul>
             </div>
             <div class="modal-footer">
-                <a href="https://pay.lowify.com.br/checkout?product_id=1NAfW9" class="cta-button pulse"
+                <a href="https://pay.lowify.com.br/checkout?product_id=Ppcl8g" class="cta-button pulse"
                     style="white-space:normal;text-align:center;font-size:0.9rem;padding:14px 16px;">SIM! QUERO O PLANO
-                    COMPLETO POR R$ 17,90</a>
+                    COMPLETO POR R$ 17,00</a>
                 <a href="https://pay.lowify.com.br/checkout?product_id=4JFNjx" class="modal-cancel">Não, prefiro
                     continuar com o Plano Básico (acesso 3 meses)</a>
             </div>
