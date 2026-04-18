@@ -234,7 +234,7 @@ h3 {
 
 .hero {
     padding: 40px 0;
-    background-color: var(--bg-dark);
+    background-color: black;
     position: relative;
     overflow: hidden;
 }
@@ -337,6 +337,8 @@ h3 {
     width: 100%;
     display: block;
     transition: var(--transition);
+    mask-image: radial-gradient(ellipse 120% 140% at 100% 0%, black 60%, transparent 95%);
+    -webkit-mask-image: radial-gradient(ellipse 120% 112% at 50% 0%, black 20%, transparent 95%);
 }
 
 .badge-premium {
@@ -1606,6 +1608,26 @@ h3 {
     padding: 10px 16px;
     box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4);
     animation: float-badge 3s ease-in-out infinite;
+    z-index: 10;
+}
+
+/* Brand Badges in Text */
+.badge-shopee {
+    background-color: #ee4d2d;
+    color: white;
+    padding: 2px 8px;
+    border-radius: 6px;
+    font-weight: 700;
+    white-space: nowrap;
+}
+
+.badge-ml {
+    background-color: #fff159;
+    color: #333;
+    padding: 2px 8px;
+    border-radius: 6px;
+    font-weight: 700;
+    white-space: nowrap;
 }
 
 .platform-badge img {
@@ -1665,12 +1687,12 @@ h3 {
 
     .platform-badge--ml {
         left: 4px;
-        bottom: 22%;
+        bottom: 8%;
     }
 
     .platform-badge--shopee {
         right: 4px;
-        bottom: 6%;
+        bottom: 72%;
     }
 }
 
