@@ -178,7 +178,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
 // Tracking: InitiateCheckout on Click
 document.addEventListener('DOMContentLoaded', () => {
-    const checkoutButtons = document.querySelectorAll('a[href*="lowify.com.br/checkout"]');
+    const checkoutButtons = document.querySelectorAll('a[href*="wiapy.com"]');
     checkoutButtons.forEach(button => {
         button.addEventListener('click', () => {
             if (window.fbq) {
@@ -207,7 +207,7 @@ document.addEventListener('DOMContentLoaded', () => {
         const urlParams = getQueryParameters();
         if (Object.keys(urlParams).length === 0) return;
 
-        const links = document.querySelectorAll('a[href*="lowify.com.br"]');
+        const links = document.querySelectorAll('a[href*="wiapy.com"]');
         links.forEach(link => {
             try {
                 const url = new URL(link.href);
