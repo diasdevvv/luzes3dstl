@@ -1027,6 +1027,16 @@ h3 {
     margin: 0 4px;
 }
 
+.bonus-mini-thumb {
+    width: 24px;
+    height: 24px;
+    vertical-align: middle;
+    margin-right: 8px;
+    border-radius: 4px;
+    object-fit: cover;
+    border: 1px solid rgba(255,255,255,0.1);
+}
+
 .delivery-note i.whatsapp {
     color: #25d366;
 }
