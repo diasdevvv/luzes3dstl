@@ -338,7 +338,7 @@ h3 {
     display: block;
     transition: var(--transition);
     mask-image: radial-gradient(ellipse 120% 140% at 100% 0%, black 60%, transparent 95%);
-    -webkit-mask-image: radial-gradient(ellipse 120% 112% at 50% 0%, black 20%, transparent 95%);
+    -webkit-mask-image: radial-gradient(ellipse 250% 95% at 5% 14%, black 20%, transparent 99%);
 }
 
 .badge-premium {
@@ -997,6 +997,7 @@ h3 {
     font-weight: 900;
     background: linear-gradient(135deg, #4ade80 0%, #22c55e 100%);
     -webkit-background-clip: text;
+    background-clip: text;
     -webkit-text-fill-color: transparent;
     line-height: 1;
     filter: drop-shadow(0 0 15px rgba(74, 222, 128, 0.3));
