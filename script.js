@@ -186,16 +186,6 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         });
     });
-
-    // Also track popup simulate buy
-    const modalPremiumBtn = document.querySelector('#upsell-modal .cta-button');
-    if (modalPremiumBtn) {
-        modalPremiumBtn.addEventListener('click', () => {
-            if (window.fbq) {
-                fbq('track', 'InitiateCheckout');
-            }
-        });
-    }
 });
 
 // UTM Propagation Script

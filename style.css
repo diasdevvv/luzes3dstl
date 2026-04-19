@@ -1696,6 +1696,10 @@ h3 {
     }
 }
 
+.purchase-button {
+    display: block;
+}
+
 .purchase-popup {
     position: fixed;
     top: 52px;
