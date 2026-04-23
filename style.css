@@ -575,6 +575,16 @@ h3 {
     margin-top: 40px;
 }
 
+.accessories-grid.single-item {
+    display: flex;
+    justify-content: center;
+}
+
+.accessories-grid.single-item .accessory-card {
+    width: 100%;
+    max-width: 400px;
+}
+
 .accessory-card {
     background: var(--bg-dark);
     border: 1px solid var(--border);
