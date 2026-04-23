@@ -38,10 +38,20 @@
         const popup = document.getElementById('purchase-popup');
         const nameEl = document.getElementById('popup-name');
         const viewsEl = document.getElementById('popup-viewers');
+        const closeBtn = document.getElementById('popup-close');
         if (!popup || !nameEl || !viewsEl) return;
+
+        let isClosedForever = false;
+        if (closeBtn) {
+            closeBtn.addEventListener('click', () => {
+                popup.classList.remove('show');
+                isClosedForever = true;
+            });
+        }
 
         let lastIdx = -1;
         function showPopup() {
+            if (isClosedForever) return;
             let idx;
             do { idx = Math.floor(Math.random() * names.length); } while (idx === lastIdx);
             lastIdx = idx;
@@ -50,10 +60,13 @@
             nameEl.textContent = `${names[idx]} · ${city}`;
             viewsEl.textContent = viewers;
             popup.classList.add('show');
-            setTimeout(() => { popup.classList.remove('show'); }, 4500);
+            setTimeout(() => { 
+                if (!isClosedForever) popup.classList.remove('show'); 
+            }, 4500);
         }
 
         setTimeout(function loop() {
+            if (isClosedForever) return;
             showPopup();
             const next = (Math.floor(Math.random() * 12) + 18) * 1000;
             setTimeout(loop, next + 5000);
