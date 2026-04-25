@@ -179,7 +179,7 @@ h3 {
 /* Brands Marquee */
 .brands-section {
     padding: 32px 0 40px;
-    background: transparent;
+    background: black;
     overflow: hidden;
 }
 
@@ -357,8 +357,8 @@ h3 {
 /* Visual Proof (Models Carousel) */
 /* Video Showcase */
 .video-showcase {
-    padding: 80px 0;
-    background: #08080a;
+    padding: 80px 0 0 0;
+    background: black;
 }
 
 .video-showcase-header {
@@ -400,7 +400,7 @@ h3 {
 
 .visual-proof {
     padding: 100px 0;
-    background-color: var(--bg-card);
+    background: linear-gradient(to bottom, black 0%, var(--bg-card) 150px, var(--bg-card) 100%);
 }
 
 .models-carousel {
@@ -741,32 +741,6 @@ h3 {
     margin-bottom: 24px;
     color: var(--accent);
 }
-
-/* Pain & Desire */
-.pain-desire {
-    margin-top: 75px;
-    padding: 10px 0;
-    background: radial-gradient(circle at 10% 50%, rgba(204, 0, 0, 0.05), transparent 40%);
-}
-
-.pain-content {
-    max-width: 800px;
-    margin: 0 auto;
-    text-align: center;
-}
-
-.pain-list {
-    list-style: none;
-    margin: 40px 0;
-}
-
-.pain-list li {
-    font-size: 1.1rem;
-    color: rgba(255, 255, 255, 0.8);
-}
-
-
-
 
 
 /* Pricing Section */
@@ -1657,77 +1631,7 @@ h3 {
     cursor: pointer;
 }
 
-/* Compatibility Card Section */
-.compat-section {
-    padding: 80px 0;
-    background-color: var(--bg-dark);
-}
 
-.compat-card {
-    max-width: 680px;
-    margin: 0 auto;
-    background: #1a1a1c;
-    border: 1px solid rgba(255, 255, 255, 0.08);
-    border-radius: 20px;
-    padding: 48px;
-}
-
-.compat-badge {
-    display: inline-block;
-    background: rgba(255, 122, 26, 0.15);
-    color: var(--accent);
-    border: 1px solid rgba(255, 122, 26, 0.4);
-    font-size: 0.72rem;
-    font-weight: 800;
-    letter-spacing: 1.5px;
-    padding: 6px 14px;
-    border-radius: 50px;
-    margin-bottom: 24px;
-    text-transform: uppercase;
-}
-
-.compat-title {
-    font-size: 2rem;
-    font-family: var(--font-heading);
-    font-weight: 800;
-    color: #fff;
-    line-height: 1.2;
-    margin-bottom: 36px;
-}
-
-.compat-list {
-    list-style: none;
-    display: flex;
-    flex-direction: column;
-    gap: 18px;
-}
-
-.compat-list li {
-    display: flex;
-    align-items: flex-start;
-    gap: 14px;
-    font-size: 1rem;
-    color: rgba(255, 255, 255, 0.85);
-    line-height: 1.5;
-}
-
-.compat-check {
-    color: var(--accent);
-    font-size: 1rem;
-    font-weight: 900;
-    flex-shrink: 0;
-    margin-top: 2px;
-}
-
-@media (max-width: 768px) {
-    .compat-card {
-        padding: 32px 24px;
-    }
-
-    .compat-title {
-        font-size: 1.5rem;
-    }
-}
 
 /* Platform Badges (Hero) */
 .platform-badge {
