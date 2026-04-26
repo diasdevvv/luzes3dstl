@@ -357,7 +357,7 @@ h3 {
 /* Visual Proof (Models Carousel) */
 /* Video Showcase */
 .video-showcase {
-    padding: 80px 0 0 0;
+    padding: 80px 0;
     background: black;
 }
 
@@ -399,7 +399,7 @@ h3 {
 }
 
 .visual-proof {
-    padding: 100px 0;
+    padding: 10px 0;
     background: linear-gradient(to bottom, black 0%, var(--bg-card) 150px, var(--bg-card) 100%);
 }
 
@@ -454,7 +454,7 @@ h3 {
 
 .market-proof {
     padding: 100px 0;
-    background: #0a0a0c;
+    background: linear-gradient(to bottom, var(--bg-card) 0%, black 150px, black 100%);
 }
 
 .featured-badge-inline {
@@ -565,6 +565,7 @@ h3 {
 /* Accessories Section */
 .accessories-section {
     padding: 60px 0;
+    background: linear-gradient(to bottom, black 0%, var(--bg-dark) 150px, var(--bg-dark) 100%);
     text-align: center;
 }
 
@@ -707,8 +708,8 @@ h3 {
 
 /* Benefits Section */
 .benefits {
-    padding: 100px 0;
-    background-color: var(--bg-card);
+    padding: 30px 0;
+    background: linear-gradient(to bottom, var(--bg-dark) 0%, var(--bg-card) 150px, var(--bg-card) 100%);
 }
 
 .benefits-grid {
@@ -745,8 +746,8 @@ h3 {
 
 /* Pricing Section */
 .pricing {
-    padding: 100px 0;
-    background-color: var(--bg-card);
+    padding: 0px 0;
+    background: linear-gradient(to bottom, var(--bg-dark) 0%, var(--bg-card) 150px, var(--bg-card) 100%);
 }
 
 .pricing-grid {
@@ -888,6 +889,7 @@ h3 {
 /* Guarantee */
 .guarantee {
     padding: 100px 0;
+    background: linear-gradient(to bottom, var(--bg-card) 0%, var(--bg-dark) 150px, var(--bg-dark) 100%);
     text-align: center;
 }
 
@@ -917,7 +919,7 @@ h3 {
 /* FAQ */
 .faq {
     padding: 100px 0;
-    background-color: var(--bg-card);
+    background: linear-gradient(to bottom, var(--bg-dark) 0%, var(--bg-card) 150px, var(--bg-card) 100%);
 }
 
 .faq-accordion {
@@ -1333,7 +1335,7 @@ h3 {
 /* New Bonus Section Styling */
 .bonus-exclusive {
     padding: 100px 0;
-    background: #0a0a0c;
+    background: linear-gradient(to bottom, var(--bg-card) 0%, var(--bg-dark) 150px, var(--bg-dark) 100%);
     text-align: center;
 }
 
@@ -1838,6 +1840,121 @@ h3 {
     50% {
         opacity: 0.6;
         transform: scale(0.8);
+    }
+}
+
+/* Filament Guide Section */
+.filament-guide {
+    padding: 80px 0;
+    background: linear-gradient(to bottom, var(--bg-dark) 0%, var(--bg-card) 150px, var(--bg-card) 100%);
+}
+
+.guide-header {
+    margin-bottom: 40px;
+}
+
+.guide-title {
+    font-size: 1.8rem;
+    font-family: var(--font-heading);
+    font-weight: 800;
+    color: #fff;
+    margin-bottom: 16px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.guide-subtitle {
+    color: rgba(255, 255, 255, 0.85);
+    font-size: 1.05rem;
+    line-height: 1.6;
+}
+
+.filament-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 20px;
+}
+
+.filament-card {
+    background: #1a1a1c;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 16px;
+    padding: 24px;
+    text-align: left;
+    transition: transform 0.2s ease;
+}
+
+.filament-card:hover {
+    transform: translateY(-5px);
+}
+
+.filament-card-warning {
+    border-color: rgba(231, 76, 60, 0.3);
+    background: linear-gradient(180deg, #1a1a1c 0%, rgba(231, 76, 60, 0.03) 100%);
+}
+
+.filament-card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 16px;
+}
+
+.filament-card-header h3 {
+    font-size: 1.3rem;
+    color: #fff;
+    font-weight: 800;
+    margin: 0;
+}
+
+.filament-stars {
+    font-size: 0.9rem;
+    letter-spacing: 2px;
+}
+
+.filament-badge {
+    display: inline-block;
+    padding: 6px 12px;
+    border-radius: 50px;
+    font-size: 0.8rem;
+    font-weight: 700;
+    margin-bottom: 16px;
+}
+
+.badge-good {
+    background: rgba(46, 204, 113, 0.15);
+    color: #2ecc71;
+    border: 1px solid rgba(46, 204, 113, 0.3);
+}
+
+.badge-bad {
+    background: rgba(231, 76, 60, 0.15);
+    color: #e74c3c;
+    border: 1px solid rgba(231, 76, 60, 0.3);
+}
+
+.filament-desc {
+    color: rgba(255, 255, 255, 0.75);
+    line-height: 1.6;
+    font-size: 0.95rem;
+    margin: 0;
+}
+
+.filament-alert {
+    margin-top: 16px;
+    padding: 12px;
+    background: rgba(231, 76, 60, 0.1);
+    border-left: 3px solid #e74c3c;
+    border-radius: 0 8px 8px 0;
+    color: #e74c3c;
+    font-size: 0.85rem;
+    line-height: 1.4;
+}
+
+@media (max-width: 768px) {
+    .guide-title {
+        font-size: 1.5rem;
     }
 }
 
