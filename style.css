@@ -1332,6 +1332,21 @@ h3 {
     animation: pulse 2s infinite;
 }
 
+@keyframes breathe-premium {
+    0%, 100% {
+        transform: scale(1);
+        box-shadow: 0 6px 20px rgba(255, 122, 26, 0.35);
+    }
+    50% {
+        transform: scale(1.02);
+        box-shadow: 0 12px 40px rgba(255, 122, 26, 0.6);
+    }
+}
+
+.pricing-card.complete .cta-button {
+    animation: breathe-premium 3s ease-in-out infinite;
+}
+
 /* New Bonus Section Styling */
 .bonus-exclusive {
     padding: 100px 0;
