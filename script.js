@@ -1,21 +1,3 @@
-// ── Urgency Bar: Countdown até meia-noite ──────────────────────────────────
-(function () {
-    function updateCountdown() {
-        const now = new Date();
-        const midnight = new Date();
-        midnight.setHours(23, 59, 59, 999);
-        const diff = midnight - now;
-        const h = Math.floor(diff / 3600000);
-        const m = Math.floor((diff % 3600000) / 60000);
-        const s = Math.floor((diff % 60000) / 1000);
-        const pad = n => String(n).padStart(2, '0');
-        const el = document.getElementById('urgency-countdown');
-        if (el) el.textContent = `${pad(h)}:${pad(m)}:${pad(s)}`;
-    }
-    updateCountdown();
-    setInterval(updateCountdown, 1000);
-})();
-
 // ── Purchase Notification Popup ────────────────────────────────────────────
 (function () {
     const names = [
@@ -38,7 +20,17 @@
         const popup = document.getElementById('purchase-popup');
         const nameEl = document.getElementById('popup-name');
         const viewsEl = document.getElementById('popup-viewers');
+        const vacanciesEl = document.getElementById('vacancies-count');
         const closeBtn = document.getElementById('popup-close');
+        
+        // Inicializar vagas do localStorage se existir
+        if (vacanciesEl) {
+            const savedCount = localStorage.getItem('vacanciesCount');
+            if (savedCount) {
+                vacanciesEl.textContent = savedCount;
+            }
+        }
+
         if (!popup || !nameEl || !viewsEl) return;
 
         let isClosedForever = false;
@@ -59,6 +51,17 @@
             const viewers = Math.floor(Math.random() * 18) + 8;
             nameEl.textContent = `${names[idx]} · ${city}`;
             viewsEl.textContent = viewers;
+            
+            // Subtrair vaga
+            if (vacanciesEl) {
+                let currentCount = parseInt(vacanciesEl.textContent);
+                if (currentCount > 7) {
+                    currentCount--;
+                    vacanciesEl.textContent = currentCount;
+                    localStorage.setItem('vacanciesCount', currentCount);
+                }
+            }
+
             popup.classList.add('show');
             setTimeout(() => { 
                 if (!isClosedForever) popup.classList.remove('show'); 

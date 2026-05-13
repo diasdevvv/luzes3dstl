@@ -171,9 +171,12 @@ h3 {
     font-size: 0.9rem;
     text-transform: uppercase;
     letter-spacing: 1px;
-    position: sticky;
+    position: fixed;
     top: 0;
+    left: 0;
+    width: 100%;
     z-index: 1000;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.2);
 }
 
 /* Brands Marquee */
@@ -233,7 +236,7 @@ h3 {
 }
 
 .hero {
-    padding: 40px 0;
+    padding: 90px 0 40px;
     background-color: black;
     position: relative;
     overflow: hidden;
