@@ -800,6 +800,19 @@ h3 {
     background: var(--bg-dark);
 }
 
+.lifetime-badge {
+    display: inline-block;
+    background: rgba(255, 122, 26, 0.1);
+    color: var(--accent);
+    border: 1px solid var(--accent);
+    padding: 4px 12px;
+    border-radius: 50px;
+    font-size: 0.75rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 8px;
+}
 
 .card-header h3 {
     font-size: 1.5rem;
@@ -813,7 +826,7 @@ h3 {
     color: var(--accent);
     text-shadow: 0 0 15px rgba(255, 122, 26, 0.3);
     animation: pulsing-glow 2s ease-in-out infinite;
-    margin-top: 20px;
+    margin-top: 5px;
 }
 
 @keyframes pulsing-glow {
