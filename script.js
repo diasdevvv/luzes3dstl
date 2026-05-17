@@ -242,3 +242,32 @@ document.addEventListener('DOMContentLoaded', () => {
     setTimeout(appendParamsToLinks, 1000);
     setTimeout(appendParamsToLinks, 3000);
 })();
+
+// Exit Intent Logic
+document.addEventListener('DOMContentLoaded', () => {
+    let hasShownExitIntent = false;
+    const exitModal = document.getElementById('exit-intent-modal');
+    const closeExitBtn = document.getElementById('close-exit-modal');
+
+    if (exitModal) {
+        document.addEventListener('mouseleave', (e) => {
+            if (e.clientY <= 0 && !hasShownExitIntent) {
+                hasShownExitIntent = true;
+                exitModal.classList.add('active');
+            }
+        });
+
+        if (closeExitBtn) {
+            closeExitBtn.addEventListener('click', () => {
+                exitModal.classList.remove('active');
+            });
+        }
+
+        // Close modal if clicking outside
+        exitModal.addEventListener('click', (e) => {
+            if (e.target === exitModal) {
+                exitModal.classList.remove('active');
+            }
+        });
+    }
+});
