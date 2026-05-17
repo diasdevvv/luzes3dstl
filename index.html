@@ -54,6 +54,14 @@
     <!-- Top Urgency Bar -->
     <div class="urgency-bar">
         <span> <strong>RESTAM <span id="vacancies-count">44</span> VAGAS</strong></span>
+        <script>
+            (function() {
+                var savedCount = localStorage.getItem('vacanciesCount');
+                if (savedCount) {
+                    document.getElementById('vacancies-count').textContent = savedCount;
+                }
+            })();
+        </script>
     </div>
 
     <!-- Purchase Notification Popup -->

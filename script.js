@@ -44,6 +44,16 @@
         let lastIdx = -1;
         function showPopup() {
             if (isClosedForever) return;
+            
+            // Check count before showing
+            if (vacanciesEl) {
+                let currentCount = parseInt(vacanciesEl.textContent);
+                if (currentCount <= 7) {
+                    isClosedForever = true;
+                    return;
+                }
+            }
+
             let idx;
             do { idx = Math.floor(Math.random() * names.length); } while (idx === lastIdx);
             lastIdx = idx;
@@ -59,12 +69,15 @@
                     currentCount--;
                     vacanciesEl.textContent = currentCount;
                     localStorage.setItem('vacanciesCount', currentCount);
+                    if (currentCount <= 7) {
+                        isClosedForever = true;
+                    }
                 }
             }
 
             popup.classList.add('show');
             setTimeout(() => { 
-                if (!isClosedForever) popup.classList.remove('show'); 
+                popup.classList.remove('show'); 
             }, 4500);
         }
 
